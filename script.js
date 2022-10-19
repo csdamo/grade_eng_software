@@ -7,7 +7,6 @@ window.onload = function(){
     var linha = "";
     var tabela = document.getElementById("id_tbody");
     for (var j = 0; j < jsonData.DISCIPLINAS.length; j++){
-      //disciplinas += "<li>" + jsonData.DISCIPLINAS[j].CODIGO + "</li>\n";
 
       var semestrePar =  (parseInt(jsonData.DISCIPLINAS[j].SEMESTRE) % 2 == 0);
 
@@ -22,8 +21,5 @@ window.onload = function(){
     }
     
     tabela.innerHTML = linha;
-
-    //lista = document.getElementById("disciplinas");
-    //lista.innerHTML = disciplinas;
     
   };
