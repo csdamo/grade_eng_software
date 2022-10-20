@@ -1,13 +1,55 @@
+#sliderPortal .informacoes-curso{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #fff;
+    font-weight: 100;
+    z-index: 200;
+    text-transform: uppercase;
+    text-align: center;
+    width: 80%;
+    max-width: 1000px;
+}
+
+.link {
+    text-decoration: none; 
+}
+
+.link:hover{
+    text-decoration: none;
+}
+
+#sliderPortal .informacoes-curso h1{
+    font-size: 62px;
+    font-weight: 100;
+    color: #fff;
+}
+
+#sliderPortal .informacoes-curso .caixa-tipo{
+    background-color: rgba(255, 255, 255, .3);
+    font-weight: normal;
+    font-size: 28px;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+.grade{
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+
 #id_thead{
-	 background-color: #1A5276;
+	 background-color: #1d4975;
 	 color: #FDFEFE;
 }
 
-.semestre-par {
+.semestre-par{
  background-color: #85C1E9;
 }
 
-.semestre-impar {
+.semestre-impar{
 background-color: #E8F8F5 ;
 }
 

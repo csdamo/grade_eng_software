@@ -13,23 +13,45 @@
     <title>Bacharelado em Engenharia de Software - Grade Curricular</title>
   </head>
   <body>
-
-    <h1 class="h2" id="nome_curso"></h1>
-    <h2 class="h5">Grade Curricular</h2>
-    <article>
-      <table id="id_form" class="table">
-        <thead id="id_thead">
-          <tr>
-            <th scope="col">Código</th>
-            <th scope="col">Semestre</th>
-            <th scope="col">Disciplina</th>
-            <th scope="col">Horas</th>
-          </tr>
-        </thead>
-        <tbody id="id_tbody">
-          
-        </tbody>
-      </table>
+    <header>
+      <div class="wrapper-simplificado">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="grupo">
+          <div class="container">
+            <a class="navbar-brand d-none d-xl-block" href="https://www.ucs.br/site/"><img src="images/logo-ucs-horizontal-branco.png" width="291" height="17" class="brand" alt="Universidade de Caxias do Sul"></a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section id="banner">
+      <div id="sliderPortal" class="carousel slide carousel-fade pointer-event" data-ride="carousel">
+        <div class="informacoes-curso">
+          <a href="https://www.ucs.br/engenharia-de-software" target="_blank" class="link"><h1 id="nome_curso"></h1></a>
+          <div class="caixa-tipo">
+            Grade Curricular
+          </div>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/capa_engenharia_software.png" class="d-block" alt="Engenharia de Software">
+          </div>
+        </div>
+      </div>
+    </section>
+    <article id="grade">
+      <div id="div_grade" class="container grade">
+        <table id="id_form" class="table">
+          <thead id="id_thead">
+            <tr>
+              <th scope="col">Código</th>
+              <th scope="col">Semestre</th>
+              <th scope="col">Disciplina</th>
+              <th scope="col">Horas</th>
+            </tr>
+          </thead>
+          <tbody id="id_tbody">
+          </tbody>
+        </table>
+      </div>
     </article>
 
     <!-- Button trigger modal -->
@@ -57,18 +79,17 @@
         </div>
       </div>
     </article>
-
-  <div class="container">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-          <a class="col-md-6 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none" href="https://www.ucs.br/site" target="_blank"><img src="images/logo_ucs_horizontal.png"  width="30%" alt="Logo ucs"></a>
-        <ul class="nav col-md-6 justify-content-end">
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Claudia A. Hobus</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Cristiane S. Damo</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Chaianne R. F. Rocha</a></li>
-        </ul>
-    
-    </footer>
-  </div>
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <a class="col-md-6 d-flex justify-content-center" href="https://www.ucs.br/site" target="_blank">
+              <img src="images/logo_ucs_horizontal.png"  width="30%" alt="Logo ucs"></a>
+          <ul class="nav col-md-6 justify-content-center">
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Claudia A. Hobus</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Cristiane S. Damo</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Chaianne R. F. Rocha</a></li>
+          </ul>
+      </footer>
+    </div>
     
   <!-- Json -->
   <script type="text/javascript" src="./Eng.Software2.json"></script>
