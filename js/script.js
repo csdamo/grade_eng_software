@@ -21,7 +21,7 @@ window.onload = function () {
 
     var classe = (semestrePar ? 'semestre-par' : 'semestre-impar');
 
-    linha += "<tr class=\"" + classe + "\"> \
+    linha += "<tr class=\"" + classe + "\" data-toggle='modal' data-target='#modal-disciplina' onclick='abrirModal(\"" + jsonData.DISCIPLINAS[j].CODIGO + "\")'> \
         <th scope=\"row\">" + jsonData.DISCIPLINAS[j].CODIGO + "</th> \
         <td>" + jsonData.DISCIPLINAS[j].SEMESTRE + "</td> \
         <td>" + jsonData.DISCIPLINAS[j].DISCIPLINA + "</td> \
@@ -33,6 +33,12 @@ window.onload = function () {
 
 };
 
-function abrirModal(indice){
-  console.log('Abriu tabela >.<', indice);
+function abrirModal(codigo){
+  
+  const modal = document.getElementById("modal-disciplina");
+  const titulo = document.getElementById("titulo-disciplina");
+
+  titulo.innerHTML = codigo;
+
+  console.log('Abriu disciplina >.<', codigo);
 }
