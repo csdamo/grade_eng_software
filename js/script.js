@@ -1,31 +1,28 @@
 window.onload = function () {
 
+  const curso = document.getElementById("nome_curso");
+  const duracao = document.getElementById("duracao");
+  const horario = document.getElementById("carga_horaria");
+  const codigo = document.getElementById("cod_curso");
 
-  var titulo = document.getElementById("nome_curso");
-  titulo.innerHTML = jsonData.CURSO;
+  curso.innerHTML = jsonData.CURSO;
+  duracao.innerHTML = jsonData.DURACAO;
+  horario.innerHTML = jsonData.CARGA_HORARIA;
+  codigo.innerHTML = jsonData.CODIGO_DO_CURSO;
 
-  var titulo = document.getElementById("duracao");
-  titulo.innerHTML = jsonData.DURACAO;
+  let linha = "";
+  let tabela = document.getElementById("id_tbody");
+  for (var i = 0; i < jsonData.DISCIPLINAS.length; i++) {
 
-  var titulo = document.getElementById("carga_horaria");
-  titulo.innerHTML = jsonData.CARGA_HORARIA;
+    let semestrePar = (parseInt(jsonData.DISCIPLINAS[i].SEMESTRE) % 2 == 0);
 
-  var titulo = document.getElementById("cod_curso");
-  titulo.innerHTML = jsonData.CODIGO_DO_CURSO;
+    let classe = (semestrePar ? 'semestre-par' : 'semestre-impar');
 
-  var linha = "";
-  var tabela = document.getElementById("id_tbody");
-  for (var j = 0; j < jsonData.DISCIPLINAS.length; j++) {
-
-    var semestrePar = (parseInt(jsonData.DISCIPLINAS[j].SEMESTRE) % 2 == 0);
-
-    var classe = (semestrePar ? 'semestre-par' : 'semestre-impar');
-
-    linha += "<tr class=\"" + classe + "\" data-toggle='modal' data-target='#modal-disciplina' onclick='abrirModal(" + JSON.stringify(jsonData.DISCIPLINAS[j]) + ")'> \
-        <th scope=\"row\">" + jsonData.DISCIPLINAS[j].CODIGO + "</th> \
-        <td>" + jsonData.DISCIPLINAS[j].SEMESTRE + "</td> \
-        <td>" + jsonData.DISCIPLINAS[j].DISCIPLINA + "</td> \
-        <td>" + jsonData.DISCIPLINAS[j].HORAS + "</td> \
+    linha += "<tr class=\"" + classe + "\" data-toggle='modal' data-target='#modal-disciplina' onclick='abrirModal(" + JSON.stringify(jsonData.DISCIPLINAS[i]) + ")'> \
+        <th scope=\"row\">" + jsonData.DISCIPLINAS[i].CODIGO + "</th> \
+        <td>" + jsonData.DISCIPLINAS[i].SEMESTRE + "</td> \
+        <td>" + jsonData.DISCIPLINAS[i].DISCIPLINA + "</td> \
+        <td>" + jsonData.DISCIPLINAS[i].HORAS + "</td> \
       </tr>\n"
   }
 
