@@ -10,3 +10,8 @@
 .semestre-impar {
 background-color: #E8F8F5 ;
 }
+
+.close{
+    top: 0;
+    right: 0;
+}
