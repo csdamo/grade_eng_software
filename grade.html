@@ -10,6 +10,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     
+    <!-- Fontawesome -->>
+    <script src="https://kit.fontawesome.com/cc5f9ecf8c.js" crossorigin="anonymous"></script>
+    
     <title>Bacharelado em Engenharia de Software - Grade Curricular</title>
   </head>
   <body>
@@ -23,10 +26,10 @@
       </div>
     </header>
     <section id="banner">
-      <div id="sliderPortal" class="carousel slide carousel-fade pointer-event" data-ride="carousel">
-        <div class="informacoes-curso">
+      <div id="banner_curso" class="carousel slide carousel-fade pointer-event" data-ride="carousel">
+        <div class="banner">
           <a href="https://www.ucs.br/engenharia-de-software" target="_blank" class="link"><h1 id="nome_curso"></h1></a>
-          <div class="caixa-tipo">
+          <div class="caixa">
             Grade Curricular
           </div>
         </div>
@@ -37,6 +40,42 @@
         </div>
       </div>
     </section>
+    <section id="informacoes_gerais" class="container">
+      <div class="row caixas">
+        <div class="col-lg-4 col-6">
+          <div class="caixa-informacao mb-4 mb-lg-0">
+            <div class="icone">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h4 class="color-p">Duração</h4>
+            <div id="duracao" class="texto-informacao">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-6">
+          <div class="caixa-informacao mb-4 mb-lg-0">
+            <div class="icone">
+              <i class="far fa-clock"></i>
+            </div>
+            <h4 class="color-p">Carga Horária</h4>
+            <div id="carga_horaria" class="texto-informacao">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-6">
+          <div class="caixa-informacao mb-4 mb-lg-0">
+            <div class="icone">
+              <i class="fa-solid fa-hashtag"></i>
+            </div>
+            <h4 class="color-p">Código do Curso</h4>
+            <div id="cod_curso" class="texto-informacao">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
     <article id="grade">
       <div id="div_grade" class="container grade">
         <table id="id_form" class="table">

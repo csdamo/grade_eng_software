@@ -1,8 +1,17 @@
 window.onload = function () {
 
 
-  titulo = document.getElementById("nome_curso");
+  var titulo = document.getElementById("nome_curso");
   titulo.innerHTML = jsonData.CURSO;
+
+  var titulo = document.getElementById("duracao");
+  titulo.innerHTML = jsonData.DURACAO;
+
+  var titulo = document.getElementById("carga_horaria");
+  titulo.innerHTML = jsonData.CARGA_HORARIA;
+
+  var titulo = document.getElementById("cod_curso");
+  titulo.innerHTML = jsonData.CODIGO_DO_CURSO;
 
   var linha = "";
   var tabela = document.getElementById("id_tbody");

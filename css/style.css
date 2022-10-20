@@ -1,4 +1,4 @@
-#sliderPortal .informacoes-curso{
+#banner_curso .banner{
     position: absolute;
     left: 50%;
     top: 50%;
@@ -20,19 +20,38 @@
     text-decoration: none;
 }
 
-#sliderPortal .informacoes-curso h1{
+#banner_curso .banner h1{
     font-size: 62px;
     font-weight: 100;
     color: #fff;
 }
 
-#sliderPortal .informacoes-curso .caixa-tipo{
+#banner_curso .banner .caixa{
     background-color: rgba(255, 255, 255, .3);
     font-weight: normal;
     font-size: 28px;
     display: inline-block;
     padding: 10px 20px;
     margin-top: 10px;
+}
+#informacoes_gerais{
+margin-top: 25px;
+}
+
+#informacoes_gerais .caixa-informacao{
+    border: 2px solid #dedede;
+    text-align: center;
+    display: block;
+    padding: 25px 0px;
+}
+
+#informacoes_gerais .caixa-informacao .icone {
+    margin-bottom: 15px;
+}
+
+.texto-informacao{
+padding-left: 5%;
+padding-right: 5%
 }
 
 .grade{
