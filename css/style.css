@@ -43,9 +43,10 @@ margin-top: 25px;
     text-align: center;
     display: block;
     padding: 25px 0px;
+    height: 200px;  
 }
 
-#informacoes_gerais .caixa-informacao .icone {
+#informacoes_gerais .caixa-informacao .icone{
     margin-bottom: 15px;
 }
 
