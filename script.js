@@ -1,6 +1,5 @@
 window.onload = function(){
 
-
     titulo = document.getElementById("nome_curso");
     titulo.innerHTML = jsonData.CURSO;
 
