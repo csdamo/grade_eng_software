@@ -1,3 +1,7 @@
+.item_menu_large{
+    max-height: 100px
+}
+
 #banner_curso .banner{
     position: absolute;
     left: 50%;
