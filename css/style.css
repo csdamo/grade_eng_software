@@ -6,6 +6,11 @@
 
 /* banner */
 
+.imagem-banner {
+    object-fit: cover;
+    height: 400px;
+}
+
 #banner_curso .banner{
     position: absolute;
     left: 50%;
@@ -37,7 +42,7 @@
 #banner_curso .banner .caixa{
     background-color: rgba(255, 255, 255, .3);
     font-weight: normal;
-    font-size: 28px;
+    font-size: 26px;
     display: inline-block;
     padding: 10px 20px;
     margin-top: 10px;
