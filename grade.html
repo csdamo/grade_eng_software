@@ -48,25 +48,27 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="images/capa_engenharia_software.png" class="d-block" alt="Engenharia de Software">
+            <figure>
+              <img src="images/capa_engenharia_software.png" class="d-block" alt="Engenharia de Software">
+            </figure>
           </div>
         </div>
       </div>
     </section>
-    <section id="informacoes_gerais" class="container">
-      <div class="row">
-        <div class="col-lg-4 col-6">
-          <div class="caixa-informacao mb-4 mb-lg-0 justify-content-center align-items-center">
-            <div class="icone">
-              <i class="fas fa-graduation-cap"></i>
-            </div>
-            <h4 class="color-p">Duração</h4>
-            <div id="duracao" class="texto-informacao">
-            </div>
+    <section id="informacoes_gerais" class="container-fluid">
+      <div class="row justify-content-center">
+        <article class="card card-size p-0 m-4 col-12 col-md-3 col-lg-3">
+            <div class="card-body caixa-informacao mb-4 mb-lg-0">
+              <div class="icone">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <h4 class="color-p">Duração</h4>
+              <div id="duracao" class="texto-informacao">
+              </div>
           </div>
-        </div>
-        <div class="col-lg-4 col-6">
-          <div class="caixa-informacao mb-4 mb-lg-0 justify-content-center align-items-center">
+        </article>
+        <article class="card card-size p-0 m-4 col-12 col-md-3 col-lg-3">
+          <div class="card-body caixa-informacao mb-4 mb-lg-0 p-3">
             <div class="icone">
               <i class="far fa-clock"></i>
             </div>
@@ -74,9 +76,9 @@
             <div id="carga_horaria" class="texto-informacao">
             </div>
           </div>
-        </div>
-        <div class="col-lg-4 col-6">
-          <div class="caixa-informacao mb-4 mb-lg-0 justify-content-center align-items-center">
+        </article>
+        <article class="card card-size p-0 m-4 col-12 col-md-3 col-lg-3">
+            <div class="card-body caixa-informacao mb-4 mb-lg-0">
             <div class="icone">
               <i class="fa-solid fa-hashtag"></i>
             </div>
@@ -84,26 +86,28 @@
             <div id="cod_curso" class="texto-informacao">
             </div>
           </div>
-        </div>
+        </article>
       </div>
     </section>
-    <article id="grade">
-      <div id="div_grade" class="container grade">
-        <table id="id_form" class="table">
-          <thead id="id_thead">
-            <tr>
-              <th scope="col">Código</th>
-              <th scope="col">Semestre</th>
-              <th scope="col">Disciplina</th>
-              <th scope="col">Horas</th>
-            </tr>
-          </thead>
-          <tbody id="id_tbody">
-          </tbody>
-        </table>
-      </div>
-    </article>
-
+    <main>
+      <article id="grade">
+        <div id="div_grade" class="container grade table-responsive">
+          <table id="id_form" class="table table-hover">
+            <thead id="id_thead">
+              <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Semestre</th>
+                <th scope="col">Disciplina</th>
+                <th scope="col">Horas</th>
+              </tr>
+            </thead>
+            <tbody id="id_tbody">
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </main>
+    
     <!-- Modal -->
     <article class="modal fade" id="modal-disciplina" tabindex="-1" aria-labelledby="modal-disciplina" aria-hidden="true">
       <div class="modal-dialog">

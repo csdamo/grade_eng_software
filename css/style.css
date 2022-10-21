@@ -1,6 +1,10 @@
+/* navBar */
 .item_menu_large{
     max-height: 100px
 }
+
+
+/* banner */
 
 #banner_curso .banner{
     position: absolute;
@@ -38,16 +42,24 @@
     padding: 10px 20px;
     margin-top: 10px;
 }
+
+
+/* cards */
+
+.card-size {
+    max-width: 18rem;
+    height: 200px;
+}
+
 #informacoes_gerais{
 margin-top: 25px;
 }
 
 #informacoes_gerais .caixa-informacao{
-    border: 2px solid #dedede;
     text-align: center;
     display: block;
     padding: 25px 0px;
-    height: 200px;  
+    height: 300px;  
 }
 
 #informacoes_gerais .caixa-informacao .icone{
@@ -58,6 +70,9 @@ margin-top: 25px;
 padding-left: 5%;
 padding-right: 5%
 }
+
+
+/* main */
 
 .grade{
     padding-top: 25px;
@@ -77,6 +92,8 @@ padding-right: 5%
 background-color: #E8F8F5 ;
 }
 
+
+/* modal */
 .close{
     top: 0;
     right: 0;
