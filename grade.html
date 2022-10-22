@@ -1,20 +1,26 @@
 <!doctype html>
 <html>
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        
+
     <!-- CSS -->
     <link rel=stylesheet href="./css/style.css" type="text/css">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/cc5f9ecf8c.js" crossorigin="anonymous"></script>
-    
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://www.ucs.br/favicon.ico">
+
     <title>Bacharelado em Engenharia de Software - Grade Curricular</title>
   </head>
+
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="id_nav">
@@ -24,7 +30,8 @@
               <img src="images/logo-ucs-horizontal-branco.png" width="80%" alt="Universidade de Caxias do Sul">
             </figure>
           </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll"
+            aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <section class="collapse navbar-collapse justify-content-end" id="navbarScroll">
@@ -38,15 +45,18 @@
         </div>
       </nav>
     </header>
-    <section id="banner" class="carousel slide" >
+    <section id="banner" class="carousel slide">
       <div id="banner_curso" class="carousel-inner" data-ride="carousel">
         <div class="carousel-item active">
           <figure>
-            <img src="images/capa_engenharia_software.png" class="d-block w-100 imagem-banner" alt="Engenharia de Software">
+            <img src="images/capa_engenharia_software.png" class="d-block w-100 imagem-banner"
+              alt="Engenharia de Software">
           </figure>
-          <div class="carousel-caption d-none d-md-block h-50 banner">
-            <a href="https://www.ucs.br/engenharia-de-software" target="_blank" class="link"><h1 id="nome_curso"></h1></a>
-            <div class="caixa">
+          <div class="carousel-caption h-50 banner">
+            <a href="https://www.ucs.br/engenharia-de-software" target="_blank" class="link">
+              <h1 id="nome_curso"></h1>
+            </a>
+            <div class="caixa d-none d-md-block">
               Grade Curricular
             </div>
           </div>
@@ -56,13 +66,13 @@
     <section id="informacoes_gerais" class="container-fluid">
       <div class="row justify-content-center">
         <article class="card card-size p-0 m-4 col-12 col-md-3 col-lg-3">
-            <div class="card-body caixa-informacao mb-4 mb-lg-0">
-              <div class="icone">
-                <i class="fas fa-graduation-cap"></i>
-              </div>
-              <h4 class="color-p">Duração</h4>
-              <div id="duracao" class="texto-informacao">
-              </div>
+          <div class="card-body caixa-informacao mb-4 mb-lg-0">
+            <div class="icone">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h4 class="color-p">Duração</h4>
+            <div id="duracao" class="texto-informacao">
+            </div>
           </div>
         </article>
         <article class="card card-size p-0 m-4 col-12 col-md-3 col-lg-3">
@@ -76,7 +86,7 @@
           </div>
         </article>
         <article class="card card-size p-0 m-4 col-12 col-md-3 col-lg-3">
-            <div class="card-body caixa-informacao mb-4 mb-lg-0">
+          <div class="card-body caixa-informacao mb-4 mb-lg-0">
             <div class="icone">
               <i class="fa-solid fa-hashtag"></i>
             </div>
@@ -105,24 +115,35 @@
         </div>
       </article>
     </main>
-    
+
     <!-- Modal -->
     <article class="modal fade" id="modal-disciplina" tabindex="-1" aria-labelledby="modal-disciplina" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <header class="modal-header position-relative">
-            <h5 class="col-12 modal-title text-center" id="titulo-disciplina"></h5>
+            <h4 class="col-12 modal-title text-center" id="titulo-disciplina"></h4>
             <button type="button" class="close position-absolute" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </header>
-          <section class="modal-body">
-            <h6 id="nome-disciplina"></h6>
-            <P id="descricao-disciplina"></P>
-            <h6 id="info-disciplina"></h6>
+          <section class="modal-body my-1 mx-3">
+            <h5 id="nome-disciplina" class="text-center"></h5>
+            <p id="descricao-disciplina" class="text-justify"></p>
+            <h5 id="info-disciplina" class="text-center"></h5>
+
+            <!-- card pre requisito -->
+            <div id="lista-pre-req" class="d-flex justify-content-center p-2">
+              <div class="col-6 card mx-2 d-none" id="pre-requisito-0">
+                <div class="card-body p-2" id="body-pre-req-0">
+                  <h5 class="card-title text-center" id="titulo-pre-req-0"></h5>
+                  <p class="card-text text-center" id="descricao-pre-req-0"></p>
+                </div>
+              </div>
+            </div>
+
           </section>
           <footer class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary btn-close" data-dismiss="modal">Ok</button>
           </footer>
         </div>
       </div>
@@ -130,30 +151,37 @@
 
     <div class="container">
       <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-            <a class="col-md-6 d-flex justify-content-center" href="https://www.ucs.br/site" target="_blank">
-              <img src="images/logo_ucs_horizontal.png"  width="30%" alt="Logo ucs"></a>
-          <ul class="nav col-md-6 justify-content-center">
-              <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Claudia A. Hobus</a></li>
-              <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Cristiane S. Damo</a></li>
-              <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Chaianne R. F. Rocha</a></li>
-          </ul>
+        <a class="col-md-6 d-flex justify-content-center" href="https://www.ucs.br/site" target="_blank">
+          <img src="images/logo_ucs_horizontal.png" width="30%" alt="Logo ucs"></a>
+        <ul class="nav col-md-6 justify-content-center">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Claudia A. Hobus</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Cristiane S. Damo</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Chaianne R. F. Rocha</a></li>
+        </ul>
       </footer>
     </div>
-    
-  <!-- Json -->
-  <script type="text/javascript" src="./json/Eng.Software2.json"></script>
 
-  <!-- JS -->
-  <script type="text/javascript" src="./js/script.js"></script>
-  
-  <!-- Bootstrap jQuery -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Json -->
+    <script type="text/javascript" src="./json/Eng.Software2.json"></script>
 
-  <!-- Bootstrap Popper.js -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <!-- JS -->
+    <script type="text/javascript" src="./js/script.js"></script>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- Bootstrap jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
 
   </body>
+
 </html>

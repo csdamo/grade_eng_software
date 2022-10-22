@@ -1,5 +1,5 @@
 /* navBar */
-.item_menu_large{
+.item_menu_large {
     max-height: 100px
 }
 
@@ -11,7 +11,7 @@
     height: 400px;
 }
 
-#banner_curso .banner{
+#banner_curso .banner {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -26,26 +26,38 @@
 }
 
 .link {
-    text-decoration: none; 
-}
-
-.link:hover{
     text-decoration: none;
 }
 
-#banner_curso .banner h1{
-    font-size: 62px;
+.link:hover {
+    text-decoration: none;
+}
+
+#banner_curso .banner h1 {
+    font-size: 1.7em;
     font-weight: 100;
     color: #fff;
 }
 
-#banner_curso .banner .caixa{
+#banner_curso .banner .caixa {
     background-color: rgba(255, 255, 255, .3);
     font-weight: normal;
     font-size: 26px;
     display: inline-block;
     padding: 10px 20px;
     margin-top: 10px;
+}
+
+@media (min-width: 400px) {
+    #banner_curso .banner h1 {
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 601px) {
+    #banner_curso .banner h1 {
+        font-size: 3em;
+    }
 }
 
 
@@ -56,30 +68,30 @@
     height: 200px;
 }
 
-#informacoes_gerais{
-margin-top: 25px;
+#informacoes_gerais {
+    margin-top: 25px;
 }
 
-#informacoes_gerais .caixa-informacao{
+#informacoes_gerais .caixa-informacao {
     text-align: center;
     display: block;
     padding: 25px 0px;
-    height: 300px;  
+    height: 300px;
 }
 
-#informacoes_gerais .caixa-informacao .icone{
+#informacoes_gerais .caixa-informacao .icone {
     margin-bottom: 15px;
 }
 
-.texto-informacao{
-padding-left: 5%;
-padding-right: 5%
+.texto-informacao {
+    padding-left: 5%;
+    padding-right: 5%
 }
 
 
 /* main */
 
-.grade{
+.grade {
     padding-top: 25px;
     padding-bottom: 10px;
 }
@@ -88,22 +100,22 @@ padding-right: 5%
     max-width: 82rem;
 }
 
-#id_thead{
-	 background-color: #1d4975;
-	 color: #FDFEFE;
+#id_thead {
+    background-color: #1d4975;
+    color: #FDFEFE;
 }
 
-.semestre-par{
- background-color: #85C1E9;
+.semestre-par {
+    background-color: #85C1E9;
 }
 
-.semestre-impar{
-background-color: #E8F8F5 ;
+.semestre-impar {
+    background-color: #E8F8F5;
 }
 
 
 /* modal */
-.close{
-    top: 0;
-    right: 0;
+.close {
+    top: 0.8em;
+    right: 0.8em;
 }

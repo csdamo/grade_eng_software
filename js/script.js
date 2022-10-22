@@ -30,11 +30,10 @@ window.onload = function () {
 
 };
 
-function abrirModal(disciplina){
+function abrirModal(disciplina) {
 
   console.log(disciplina);
-  
-  const modal = document.getElementById("modal-disciplina");
+
   const titulo = document.getElementById("titulo-disciplina");
   const nome = document.getElementById("nome-disciplina");
   const descricao = document.getElementById("descricao-disciplina");
@@ -44,8 +43,65 @@ function abrirModal(disciplina){
 
   titulo.innerHTML = disciplina.CODIGO;
   nome.innerHTML = disciplina.DISCIPLINA;
-  descricao.innerHTML = disciplina.EMENTA;
+  descricao.innerHTML = !!disciplina.EMENTA ? disciplina.EMENTA : "";
   info.innerHTML = disciplina.SEMESTRE + "º Semestre - Modalidade " + modalidade + " - Duração " + disciplina.HORAS + " horas";
 
-  console.log('Abriu disciplina >.<', disciplina);
+  if (!!disciplina.PREREQUISITOS) {
+
+    let req = disciplina.PREREQUISITOS.toString();
+    let arrReq = req.split(", ");
+
+    arrReq.map((item, index) => {
+
+      adicionaPreRequisitos(jsonData.DISCIPLINAS[item], index);
+      removePreRequisitos(index);
+
+    })
+
+  }
+}
+
+function adicionaPreRequisitos(requisito, index) {
+
+  let lista = document.getElementById('lista-pre-req');
+  let card = document.getElementById("pre-requisito-0");
+  let body = document.getElementById("body-pre-req-0");
+  let titulo = document.getElementById("titulo-pre-req-0");
+  let descricao = document.getElementById("descricao-pre-req-0");
+
+  //Se tiver mais que um Pre requisito, faz uma copia dos elementos do primeiro
+  if (index > 0) {
+
+    card = card.cloneNode(false);
+    body = body.cloneNode(false);
+    titulo = titulo.cloneNode(false);
+    descricao = descricao.cloneNode(false);
+
+    lista.appendChild(card); // Elemento pai dos requisitos
+    card.appendChild(body);
+    body.appendChild(titulo);
+    body.appendChild(descricao);
+
+  }
+
+  card.id = "pre-requisito-" + index;
+  body.id = "body-pre-req-" + index;
+  titulo.id = "titulo-pre-req-" + index;
+  descricao.id = "descricao-pre-req-" + index;
+
+  card.classList.remove("d-none");
+  titulo.innerHTML = requisito.CODIGO;
+  descricao.innerHTML = requisito.DISCIPLINA;
+
+}
+
+function removePreRequisitos(index){
+
+  $("#modal-disciplina").on("hidden.bs.modal", function () {
+  
+    let card = document.getElementById("pre-requisito-" + index);
+    index == 0 ? card.classList.add("d-none") : card.remove();
+
+  });
+
 }
