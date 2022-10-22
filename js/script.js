@@ -18,7 +18,7 @@ window.onload = function () {
 
     let classe = (semestrePar ? 'semestre-par' : 'semestre-impar');
 
-    linha += "<tr class=\"" + classe + "\" data-toggle='modal' data-target='#modal-disciplina' onclick='abrirModal(" + JSON.stringify(jsonData.DISCIPLINAS[i]) + ")'> \
+    linha += "<tr class=\"" + classe + " linha_tabela\" data-toggle='modal' data-target='#modal-disciplina' onclick='abrirModal(" + JSON.stringify(jsonData.DISCIPLINAS[i]) + ")'> \
         <th scope=\"row\">" + jsonData.DISCIPLINAS[i].CODIGO + "</th> \
         <td>" + jsonData.DISCIPLINAS[i].SEMESTRE + "</td> \
         <td>" + jsonData.DISCIPLINAS[i].DISCIPLINA + "</td> \
@@ -32,7 +32,7 @@ window.onload = function () {
 
 function abrirModal(disciplina) {
 
-  console.log(disciplina);
+  //console.log(disciplina);
 
   const titulo = document.getElementById("titulo-disciplina");
   const nome = document.getElementById("nome-disciplina");

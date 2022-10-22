@@ -113,6 +113,10 @@
     background-color: #E8F8F5;
 }
 
+.linha_tabela:hover {
+    cursor: pointer;
+}
+
 
 /* modal */
 .close {
