@@ -34,7 +34,7 @@
             aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <section class="collapse navbar-collapse justify-content-end" id="navbarScroll">
+          <section class="collapse navbar-collapse justify-content-end overflow-auto" id="navbarScroll">
             <ul class="navbar-nav item_menu_large">
               <li><a class="nav-link active" aria-current="page" href="https://www.ucs.br/site/">Início</a></li>
               <li><a class="nav-link" href="https://www.ucs.br/site/biblioteca/">Biblioteca</a></li>
@@ -117,7 +117,7 @@
     </main>
 
     <!-- Modal -->
-    <article class="modal fade" id="modal-disciplina" tabindex="-1" aria-labelledby="modal-disciplina" aria-hidden="true">
+    <section class="modal fade" id="modal-disciplina" tabindex="-1" aria-labelledby="modal-disciplina" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <header class="modal-header position-relative">
@@ -126,7 +126,7 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </header>
-          <section class="modal-body my-1 mx-3">
+          <article class="modal-body my-1 mx-3">
             <h5 id="nome-disciplina" class="text-center"></h5>
             <p id="descricao-disciplina" class="text-justify"></p>
             <h5 id="info-disciplina" class="text-center"></h5>
@@ -140,13 +140,13 @@
                 </div>
               </div>
             </div>
-          </section>
+          </article>
           <footer class="modal-footer">
             <button type="button" class="btn btn-primary btn-close" data-dismiss="modal">Ok</button>
           </footer>
         </div>
       </div>
-    </article>
+    </section>
 
     <div class="container">
       <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
